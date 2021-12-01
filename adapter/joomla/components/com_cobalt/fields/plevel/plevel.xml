@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cobaltfield>
+	<name>Plans Level Select</name>
+	<group>Simple Form Elements</group>
+	
+	<config><fields name="params">
+		<fieldset name="tmpl">
+			<field type="filelist" name="template_input" filter="php$" hide_none="1" hide_default="1" directory="/components/com_cobalt/fields/select/tmpl/input" label="F_TMPLINPUT" default="default.php" />
+			<field type="filelist" name="template_output_list" filter="php$" hide_none="1" hide_default="1" directory="/components/com_cobalt/fields/select/tmpl/output" label="F_TMPLLIST" default="default.php" />
+			<field type="filelist" name="template_output_full" filter="php$" hide_none="1" hide_default="1" directory="/components/com_cobalt/fields/select/tmpl/output" label="F_TMPLFULL" default="default.php" />
+		</fieldset>
+		<fieldset name="core">
+			<field name="sortable" type="radio" class="btn-group" default="0" label="F_SORTABLE" description="">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="general" label="FS_GENERAL">
+			<field name="sort" type="list" default="2" label="F_SORT" description="">
+				<option value="1">XML_OPT_ASENTERED</option>
+				<option value="2">XML_OPT_ACS</option>
+				<option value="3">XML_OPT_DESC</option>
+			</field>
+			<field name="width" type="text" default="450" label="F_MAXWIDTH" size="3" />
+			<field name="size" type="text" size="3" default="10" label="F_MAXSIZE" description="F_MAXSIZE_DESCR" />
+			<field name="values" type="textarea" cols="40" rows="5" default="" label="F_VALUESLIST" description="F_VALUESLIST_DESCR" />
+			<field name="default_val" type="text" size="2" default="0" label="F_DEFAULTVAL" />
+			<field name="color_separator" type="list" default="^" label="F_COLORSEPARATOR">
+				<option value="^">^</option>
+				<option value="|">|</option>		
+			</field>
+			<field name="label" type="text" size="40" default="- Select Element -" label="F_SQLLABEL"  />
+		</fieldset>
+		
+		<fieldset name="users" label="FS_USERSVALUE">
+			<field name="add_value" type="accesslevel" default="2" label="F_WHOCANADD" description="F_WHOCANADD_DESCR">
+				<option value="0">XML_OPT_NOONE</option>
+			</field>
+	    	<field name="save_new" type="radio" class="btn-group" default="1" label="F_SAVENEWTOLIST" description="F_SAVENEWTOLIST_DESCR">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>
+	    	<field name="user_value_label" type="text" size="50" default="Your variant" label="F_USERVALUELABEL" description="" />
+		</fieldset>
+	</fields>
+	
+</config></cobaltfield>

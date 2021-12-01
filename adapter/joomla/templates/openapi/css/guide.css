@@ -1,0 +1,57 @@
+ .guide-component {
+    font-family: Verdana;
+    font-size: 13px;
+    color: #666;
+    line-height: 18px;
+    position: absolute;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #DBDCDD;
+    background-color: #FEED6F;
+    stroke: 1px;
+    padding: 12px 10px 12px 15px;
+    width: 254px;
+    height: auto;
+    z-index: 99999;
+}
+
+.guide-header{
+  text-align: right;
+  width:auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.guide-close{
+  position: relative;
+  left: 6px;
+  top: -6px;
+  background-image: url("../images/ic_bubble_close.png");
+  background-repeat: no-repeat;
+  height: 12px;
+  line-height: 12px;
+  width: 12px;
+}
+
+.guide-close:hover {
+  text-decoration: none;
+}
+.guide-container{width: 100%;}
+
+
+.guide-component .arrow {display:block;_display:none;position:absolute;overflow:hidden;}
+.guide-component .arrow .out,.arrow .inside{ font-weight:bold;font-size:16px; }
+.guide-component .arrow .out{display:inline-block;overflow:hidden;color:#DBDCDD;}
+.guide-component .arrow .inside{position:absolute;color:#FEED6F;}
+
+.guide-component .arXYt {top:-9px;left:20px;}
+.guide-component .aiXYt {top:1px;left:0px;}
+.guide-component .arXYl {top:9px;left:-9px;}
+.guide-component .aiXYl {top:0px;left:1px;}
+.guide-component .arXYr {top:9px;right:-9px;}
+.guide-component .aiXYr {top:0px;right:1px;}
+.guide-component .arXYb {bottom:-14px;left:20px;}
+.guide-component .aiXYb {bottom:5px;left:0px;}
+
+
+.step7 .arXYb,.step8 .arXYb,.step9 .arXYb,.step10 .arXYb{bottom: -12px;}

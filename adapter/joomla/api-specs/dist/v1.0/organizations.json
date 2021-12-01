@@ -1,0 +1,115 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost/joomla/webservices",
+  "resourcePath": "/login",
+  "produces": [
+    "application/json",
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis": [
+  
+   {"path":"/organizations",
+ "operations":[{"method":"POST",
+ "summary":"Create a new organization",
+ "notes":"",
+ "type":"void",
+ "nickname":"Create organizations",
+ "authorizations":{"oauth2":[{"scope":"write:pets",
+             "description":"write to your pets"}]},
+ "parameters":[
+			           {
+              "name": "title",
+              "description": "title of the organization",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+			       {
+              "name": "type",
+              "description": "accepts either host or partner",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+			{
+              "name": "email",
+              "description": "accepts an email associated with the organizations",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+		 ],
+ "responseMessages":[{"code":400,
+         "message":"Invalid order"}]},
+		 
+		 {
+          "method": "GET",
+          "summary": "Get organizations",
+          "type": "string",
+          "nickname": "Get organizations",
+          "parameters": [
+      {"name":"limit",
+			"description":"how many records to show",
+			"required":false,
+			"type":"number",
+			"paramType":"path",
+			"allowMultiple":false}
+          ]
+        },
+        
+        {
+          "method": "PUT",
+          "summary": "modify an existing organizations",
+          "type": "string",
+          "nickname": "put organizations",
+          "parameters": [
+       {
+              "name": "id",
+              "description": "id of the object you want to modify",
+              "required": true,
+              "type": "int",
+              "paramType": "body"
+            },
+			           {
+              "name": "title",
+              "description": "variable for changing the objects title",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+			{
+              "name": "type",
+              "description": "accepts either host or partner",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+			{
+              "name": "email",
+              "description": "accepts an email associated with the organizations",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "delete an organizations",
+          "type": "string",
+          "nickname": "delete organizations",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The Id of the object to be deleted",
+              "required": true,
+              "type": "int",
+              "paramType": "path"
+            }
+		 ]}]}
+  
+		 
+		 ]}

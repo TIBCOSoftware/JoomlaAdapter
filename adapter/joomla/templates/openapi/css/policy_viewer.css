@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+#policy_viewer_mask {
+    background-color: rgba(255, 255, 255, 0.7);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1500;
+}
+
+#policy_viewer_overlay {
+    background-color: #FFFFFF;
+    height: 570px;
+    left: 50%;
+    margin: 0 0 0 -470px;
+    max-width: 960px;
+    overflow: hidden;
+    padding: 0;
+    top: 6%;
+    width: 940px;
+    z-index: 1501;
+}
+
+#policy_viewer_mask.policy-viewer-position,
+#policy_viewer_overlay.policy-viewer-position {
+    display: none;
+    position: fixed;
+}
+
+#policy_viewer_header {
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    background-color: #2F84AE;
+    color: #FFFFFF;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-family: Helvetica, Verdana, Arial, "sans serif";
+    overflow: hidden;
+    padding: 0;
+}
+
+#policy_viewer_http_method {
+    background-color: #D97A36;
+    overflow: hidden;
+    text-align: center;
+    width: 60px;
+}
+
+#policy_viewer_titles {
+    padding: 0 0 0 20px;
+}
+
+#policy_viewer_titles > p {
+    font-size: 15px;
+    line-height: 15px;
+}
+
+#policy_viewer_close_btn {
+    text-align: center;
+    width: 50px;
+}
+
+#policy_viewer_close_btn > a {
+    background-image: url('../images/glyphicons-208-remove-white.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+}
+
+#policy_viewer_close_btn > a:hover {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+#policy_viewer_content {
+    border-bottom: 1px solid #ABADAF;
+    border-left: 1px solid #ABADAF;
+    border-right: 1px solid #ABADAF;
+    height: 449px;
+    left: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 80px;
+}
+
+#policy_viewer_content > .policy-viewer-content-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+#policy_viewer_content_mask {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: url('../images/policy_viewer_loading.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 80px;
+    z-index: 1500;
+}
+
+#policy_viewer_content.border-bottom-radius,
+#policy_viewer_content_mask.border-bottom-radius {
+    -moz-border-radius-bottomleft: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.header-height {
+    height: 80px;
+    line-height: 80px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+@media (min-width: 1200px) {
+
+    #policy_viewer_overlay {
+        margin: 0 0 0 -480px;
+        width: 960px;
+    }
+}
+
+@media (max-width: 979px) and (min-width: 768px) {
+
+    #policy_viewer_overlay {
+        margin: 0 0 0 -362px;
+        width: 724px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    #policy_viewer_overlay {
+        bottom: 20px;
+        left: 20px;
+        margin: 0;
+        min-width: 380px;
+        right: 20px;
+        top: 20px;
+        width: auto;
+    }
+}

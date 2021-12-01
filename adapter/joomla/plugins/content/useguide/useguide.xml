@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content">
+	<name>plg_content_useguide</name>
+	<author>Jacky</author>
+	<creationDate>Jan 3 2014</creationDate>
+	<copyright>TIBCO Software Inc.</copyright>
+	<license>@license GNU General Public License version 2; see LICENSE.txt</license>
+	<authorUrl>www.tibco.com</authorUrl>
+	<version>3.0.0</version>
+	<description>PLG_CONTENT_USEGUIDE_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="useguide">tibco.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_useguide.ini</language>
+		<language tag="en-GB">en-GB.plg_content_useguide.sys.ini</language>
+	</languages>
+
+</extension>

@@ -1,0 +1,75 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath":"http://localhost/joomla/webservices",
+  "apis": [
+    {
+      "path": "http://localhost/joomla/dist/v1.0/authentication.json",
+      "description": "Operations about Authentication"
+    },
+    {
+      "path": "http://localhost/joomla/dist/v1.0/apis.json",
+      "description": "Operations about Apis"
+    },
+    {
+      "path": "http://localhost/joomla/dist/v1.0/operations.json",
+      "description": "Operations about Operations"
+    },
+	{
+      "path": "http://localhost/joomla/dist/v1.0/organizations.json",
+      "description": "Operations about Organizations"
+    },
+	{
+      "path": "http://localhost/joomla/dist/v1.0/plans.json",
+      "description": "Operations about Plans"
+    },
+	{
+      "path": "http://localhost/joomla/dist/v1.0/products.json",
+      "description": "Operations about Products"
+    },
+	{
+      "path": "http://localhost/joomla/dist/v1.0/subscriptions.json",
+      "description": "Operations about Subscriptions"
+    }
+  ],
+  "authorizations": {
+    "oauth2": {
+      "type": "oauth2",
+      "scopes": [
+        {
+          "scope": "email",
+          "description": "Access to your email address"
+        },
+        {
+          "scope": "pets",
+          "description": "Access to your pets"
+        }
+      ],
+      "grantTypes": {
+        "implicit": {
+          "loginEndpoint": {
+            "url": "http://petstore.swagger.wordnik.com/oauth/dialog"
+          },
+          "tokenName": "access_token"
+        },
+        "authorization_code": {
+          "tokenRequestEndpoint": {
+            "url": "http://petstore.swagger.wordnik.com/oauth/requestToken",
+            "clientIdName": "client_id",
+            "clientSecretName": "client_secret"
+          },
+          "tokenEndpoint": {
+            "url": "http://petstore.swagger.wordnik.com/oauth/token",
+            "tokenName": "access_code"
+          }
+        }
+      }
+    }
+  },
+  "info": {
+    "title": "Sample of APIX Webservices",
+    "description": "This is a sample of the services provided by the APIX Webservices Plugin for Joomla.",
+    "termsOfServiceUrl": "",
+    "contact": "ddella@tibco.com"
+  }
+}

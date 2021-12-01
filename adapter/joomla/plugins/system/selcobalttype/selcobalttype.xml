@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system">
+	<name>Cobalt Content Type Filter - Set the default type for each section</name>
+	<author>Jacky</author>
+	<creationDate>oct 2013</creationDate>
+	<authorEmail>love0.0chen@gmail.com</authorEmail>
+	<authorUrl>www.webhulu.org</authorUrl>
+	<version>3.1.1</version>
+	<description>Apply a content type filter for cobalt section</description>
+	<files>
+		<filename plugin="selcobalttype">selcobalttype.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_selcobalttype.ini</language>
+		<language tag="en-GB">en-GB.plg_system_selcobalttype.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="domain" type="url"
+					description="PLG_SELCOBALTTYPE_DOMAIN_DESCRIPTION"
+					label="PLG_SELCOBALTTYPE_DOMAIN_LABEL"
+					filter="string"
+					validate="url"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

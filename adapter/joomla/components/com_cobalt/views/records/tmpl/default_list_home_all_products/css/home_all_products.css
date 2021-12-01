@@ -1,0 +1,95 @@
+.home-all-items {
+  height: auto;
+}
+
+.home-all-items h3, .home-all-items h5 {
+  font-weight: normal;
+}
+
+.home-all-items > h3 > span {
+  text-transform: uppercase;
+}
+
+.home-all-items .als-container {
+  height: auto;
+}
+
+.home-all-items .my-als-items {
+  height: auto;
+  overflow: hidden;
+}
+
+.home-all-items .my-als-items > .als-viewport {
+  width: 100%;
+}
+
+.home-all-items .my-als-items > .als-viewport > .als-wrapper {
+  margin: 0px;
+}
+
+.home-all-items .my-als-items .als-item {
+  cursor: default;
+  height: 180px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  width: 300px;
+}
+
+.home-all-items .my-als-items .als-item > a {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+.home-all-items .my-als-items .als-item > a > div {
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.home-all-items .my-als-items .als-item > a > div:hover {
+  background-color: transparent;
+}
+
+.home-all-items .my-als-items .als-item > a > div:first-child {
+  height: auto;
+  min-height:80px;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+.home-all-items .my-als-items .als-item > a > div img {
+  border: none;
+  box-shadow: none;
+}
+
+.home-all-items .my-als-items .als-item > a > .products-list-item-texts {
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+.home-all-items .my-als-items .als-item .products-list-item-texts > h5, .home-all-items .my-als-items .als-item .products-list-item-texts > div {
+  margin: 0px 0px 15px;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: normal;
+  width: 280px;
+  word-wrap: normal;
+}
+
+.home-all-items .my-als-items .als-item .products-list-item-texts > .products-list-item-title {
+  color: #0099CC;
+  font-size: 20px;
+  height: auto;
+  line-height: 20px;
+  max-height: 20px;
+  text-transform: uppercase;
+}
+
+.home-all-items .my-als-items .als-item .products-list-item-texts > .products-list-item-description {
+  color: #5F5E5E;
+  font-family: Arial;
+  font-size: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+

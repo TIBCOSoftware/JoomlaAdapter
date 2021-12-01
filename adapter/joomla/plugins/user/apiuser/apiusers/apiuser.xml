@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="apiuser">
+        <fieldset name="apiuser">
+            <field
+                    name="first-name"
+                    type="text"
+                    id="first-name"
+                    description="PLG_USER_APIUSER_FIELD_FIRST_NAME_DESC"
+                    filter="string"
+                    label="PLG_USER_APIUSER_FIELD_FIRST_NAME_LABEL"
+                    size="30"
+                    required="true"
+                    />
+            <field
+                    name="last-name"
+                    type="text"
+                    id="last-name"
+                    description="PLG_USER_APIUSER_FIELD_lAST_NAME_DESC"
+                    filter="string"
+                    label="PLG_USER_APIUSER_FIELD_lAST_NAME_LABEL"
+                    size="30"
+                    required="true"
+                    />
+            <field
+                    name="password1"
+                    type="password"
+                    autocomplete="off"
+                    class="validate-password"
+                    description="COM_USERS_DESIRED_PASSWORD"
+                    field="password1"
+                    filter="raw"
+                    label="COM_USERS_PROFILE_PASSWORD1_LABEL"
+                    size="30"
+                    validate="password"
+                    required="true"
+                    />
+            <field
+                    name="password2"
+                    type="password"
+                    autocomplete="off"
+                    class="validate-password"
+                    description="COM_USERS_PROFILE_PASSWORD2_DESC"
+                    field="password1"
+                    filter="raw"
+                    label="COM_USERS_PROFILE_PASSWORD2_LABEL"
+                    message="COM_USERS_PROFILE_PASSWORD1_MESSAGE"
+                    size="30"
+                    validate="equals"
+                    required="true"
+                    />
+            <field
+                    name="user-email"
+                    type="email"
+                    id="user-email"
+                    description="PLG_USER_APIUSER_FIELD_EMAIL_DESC"
+                    filter="string"
+                    label="PLG_USER_APIUSER_FIELD_EMAIL_LABEL"
+                    size="30"
+                    required="true"
+                    />
+            <field
+                    name="captcha"
+                    type="captcha"
+                    id="captcha"
+                    description="PLG_USER_APIUSER_FIELD_VALIDATE_DESC"
+                    label="PLG_USER_APIUSER_FIELD_VALIDATE_LABEL"
+                    />
+            <field
+                    name="to-agree"
+                    type="checkbox"
+                    class="required validate-is_agree"
+                    id="to-agree"
+                    description="Agree the terms of use"
+                    label="Agree the terms of use"
+                    required="true"
+                    />
+
+        </fieldset>
+    </fields>
+</form>

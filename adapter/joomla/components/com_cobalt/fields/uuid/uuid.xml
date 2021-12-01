@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cobaltfield>
+	<name>Uuid</name>
+	<group>Simple Form Elements</group>
+
+	<config><fields name="params">
+		<fieldset name="tmpl">
+			<field type="filelist" name="template_input" filter="php$" hide_none="1" hide_default="1" directory="/components/com_cobalt/fields/text/tmpl/input" label="F_TMPLINPUT" default="default.php" />
+			<field type="filelist" name="template_output_list" filter="php$" hide_none="1" hide_default="1" directory="/components/com_cobalt/fields/text/tmpl/output" label="F_TMPLLIST" default="default.php" />
+			<field type="filelist" name="template_output_full" filter="php$" hide_none="1" hide_default="1" directory="/components/com_cobalt/fields/text/tmpl/output" label="F_TMPLFULL" default="default.php" />
+		</fieldset>
+		<fieldset name="core">
+			<field name="sortable" type="radio" class="btn-group" default="0" label="F_SORTABLE" description="">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>
+			<field name="ordering_mode" type="list" default="0" label="F_SORTABLEMODE" description="">
+				<option value="digits">F_OPT_DIGITS</option>
+				<option value="alpha">F_OPT_ALPHA</option>
+			</field>
+		</fieldset>
+		<fieldset name="filter" label="FS_FILTERGEN">
+			<field type="filelist" name="template_filter" filter="php$" hide_none="1" hide_default="1" directory="/components/com_cobalt/fields/text/tmpl/filter" label="F_TMPLFILTER" default="autocomplete.php" />
+			<field type="filelist" name="template_filter_module" filter="php$" hide_none="1" hide_default="1" directory="/components/com_cobalt/fields/text/tmpl/filter" label="F_TMPLFILTERMODULE" default="autocomplete.php" />
+
+			<field name="filter_enable" type="radio" class="btn-group" default="0" label="F_ENABLE" description="">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>
+			<field name="filter_hide" type="radio" class="btn-group" default="0" label="F_HIDE" description="F_HIDE_DESCR">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>
+			<field name="filter_descr" type="text" default="" size="40" label="F_DESCR" description="" />
+		</fieldset>
+
+		<fieldset name="filter2" label="FS_FILTERFIELDSPEC">
+			<field name="filter_show_number" type="radio" class="btn-group" default="1" label="F_FBOXSHOWNUMS" description="F_FBOXSHOWNUMS_DESCR">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>
+			<field name="filter_linkage" type="list" default="1" label="F_VALUELINKAGE" description="F_VALUELINKAGE_DESCR">
+				<option value="0">XML_OPT_NOFILTERLINK</option>
+				<option value="1">XML_OPT_VALUEASFLINK</option>
+				<option value="2">XML_OPT_SMALICONASFLINK</option>
+			</field>
+			<field name="filter_icon" type="imagelist" default="funnel-small.png" directory="/components/com_cobalt/images/filter/" label="F_ICON" description="F_ICON_DESCR" />
+			<field name="filter_tip" type="text" default="Show all records where %s is equal to %s" size="40" label="F_VALUETOOLTIP" description="F_VALUETOOLTIP_DESCR" />
+			<field name="order_by" type="list" default="0" label="F_FILTERORDER" description="">
+				<option value="">XML_OPT_DONOTORDER</option>
+				<option value="field_value ASC">XML_OPT_TITLEASC</option>
+				<option value="field_value DESC">XML_OPT_TITLEDESC</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="general" label="FS_GENERAL">
+			<field name="maxlength" type="text" default="0" size="3" label="F_MAXLENGTH" description="F_MAXLENGTH_DESCR" />
+			<field name="default_val" type="text" default="0" label="F_DEFAULT" />
+
+			<field type="size" size="3" name="size" label="F_SIZE" description="" default="90%" />
+			<field type="text" size="40" name="prepend" label="F_SIGNBEFORE" description="" />
+			<field type="text" size="40" name="append" label="F_SIGNAFTER" description="" />
+
+			<field name="allow_html" label="F_ALLOWRAWHTML" type="radio" class="btn-group" default="0">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</field>
+
+			<field name="length" type="text" default="0" label="F_INTROLENGTH" description="F_INTROLENGTH_DESCR" />
+			<field name="seemore" type="text" default=">>>" label="F_READMORELABEL" description="" />
+
+			<field name="qr_code" type="radio" class="btn-group" default="0" label="F_SHOWQR" description="">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>
+			<field name="qr_width" type="text" default="60" size="5" label="F_QRSIZE" />
+			<field name="regex_val" type="text" default="" size="" label="F_REGEXVAL" />
+		</fieldset>
+		<fieldset name="mask" label="FS_MASK" description="FS_MASK_DESCR">
+			<field type="metextmask" name="mask" label="F_MASK" />
+			<field type="radio" class="btn-group" name="show_mask" label="F_SHOWMASKININPUT" default="1" description="F_SHOWMASKININPUT_DESCR">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>
+		</fieldset>
+	</fields>
+
+</config></cobaltfield>

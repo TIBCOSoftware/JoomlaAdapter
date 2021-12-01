@@ -1,0 +1,195 @@
+==================================================================================
+Project Name    : Adapter Code for TIBCO(R) API Exchange and Joomla!
+Release Version : 2.3.4
+Release Date    : November 2021
+==================================================================================
+DISCLAIMER
+
+No Support. You acknowledge that your license to this code does not entitle you
+to any maintenance or support for this code, including upgrades, patches,
+enhancements, bug fixes, new versions or new releases of the code.
+
+If you wish to obtain support for this code, please contact TIBCO for details
+on TIBCO's open source support plans.
+==================================================================================
+
+Get All Registered APIs 
+
+Step 1 - Logging in and getting your records.
+
+Logging in is done by using the /login operation with the Http Method of POST since we will be sending our credentials.
+Expand the all the operations for Login by clicking the Expand Operations button or clicking on the Word Login then click the green /login operation.
+You Should see expanded information about the /login operation.
+Fill out the text boxes with your credentials.
+For this example you can set the username to admin and the password to admin.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a response indicating that your login was successful.
+
+Getting your records is done by using the /apis operation with the Http Method of GET.
+Expand the all the operations for APIs by clicking the Expand Operations button or clicking on the Word APIs then click the blue GET /apis operation.
+You Should see expanded information about the blue GET /apis operation.
+You can then optionally set a limit of how many records you wish to show in your response by using the text boxes.
+For now we want to see all of the records so leave limit blank.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a JSON response of each record. 
+
+Get single API by Joomla ID
+
+If you know the Joomla ID of the API you wish to get and know how to login please Skip to Step 2.
+
+Step 1 - Logging in and obtaining the Joomla ID of the record you wish to get.
+
+Logging in is done by using the /login operation with the Http Method of POST since we will be sending our credentials.
+Expand the all the operations for Login by clicking the Expand Operations button or clicking on the Word Login then click the green /login operation.
+You Should see expanded information about the /login operation.
+Fill out the text boxes with your credentials.
+For this example you can set the username to admin and the password to admin.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a response indicating that your login was successful.
+
+Obtaining the id of the record you wish to delete is done by using the /apis operation with the Http Method of GET.
+Expand the all the operations for APIs by clicking the Expand Operations button or clicking on the Word APIs then click the blue GET /apis operation.
+You Should see expanded information about the  blue GET /apis operation.
+You can then optionally set a limit of how many records you wish to show in your response by using the text boxes.
+For now we want to see all of the records so leave limit blank.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a JSON response that is fairly long. 
+Look for the Title of your API in the list and then find the correlated id in the same JSON object.
+This is your Joomla record id, remember it/write it down for the next step.
+
+Step 2 - Getting the API by ID
+
+Obtaining the id of the record you wish to delete is done by using the /apis{id} operation with the Http Method of GET.
+Expand the all the operations for APIs by clicking the Expand Operations button or clicking on the Word APIs then click the blue GET /apis{id} operation.
+You Should see expanded information about the  blue GET /apis{id} operation.
+You can now input the ID obtained in Step 1 into the text box labelled id.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a response with the Json encoded API you requested. 
+
+Delete an API
+
+If you know the Joomla ID of the API you wish to delete and know how to login please Skip to Step 2.
+
+Step 1 - Logging in and obtaining the Joomla ID of the record you wish to delete.
+
+Logging in is done by using the /login operation with the Http Method of POST since we will be sending our credentials.
+Expand the all the operations for Login by clicking the Expand Operations button or clicking on the Word Login then click the green /login operation.
+You Should see expanded information about the /login operation.
+Fill out the text boxes with your credentials.
+For this example you can set the username to admin and the password to admin.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a response indicating that your login was successful.
+
+Obtaining the id of the record you wish to delete is done by using the /apis operation with the Http Method of GET.
+Expand the all the operations for APIs by clicking the Expand Operations button or clicking on the Word APIs then click the blue GET /apis operation.
+You Should see expanded information about the  blue GET /apis operation.
+You can then optionally set a limit of how many records you wish to show in your response by using the text boxes.
+For now we want to see all of the records so leave limit blank.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a JSON response that is fairly long. 
+Look for the Title of your API in the list and then find the correlated id in the same JSON object.
+This is your Joomla record id, remember it/write it down for the next step.
+
+Step 2 - Deleting the API
+
+We can now Delete our selected API with the /apis operation with the Http Method of Delete.
+Expand the all the operations for APIs by clicking the Expand Operations button or clicking on the Word APIs then the click the red Delete /apis operation.
+You Should see expanded information about the red Delete /apis operation.
+You can now input the ID obtained in Step 1 into the text box labelled id.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a response telling you that your delete was successful. 
+
+Getting All Environments
+
+Step 1 - Logging in and getting all of your Environments.
+
+Logging in is done by using the /login operation with the Http Method of POST since we will be sending our credentials.
+Expand the all the operations for Login by clicking the Expand Operations button or clicking on the Word Login then click the green /login operation.
+You Should see expanded information about the /login operation.
+Fill out the text boxes with your credentials.
+For this example you can set the username to admin and the password to admin.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a response indicating that your login was successful.
+
+Getting or viewing all of your environments is done by using the /environments operation with the Http Method of GET.
+Expand the all the operations for Environment by clicking the Expand Operations button or clicking on the Word Environment then click the blue GET /environments operation.
+You Should see expanded information about the  blue GET /environments operation.
+You can then optionally set a limit of how many records you wish to show in your response by using the text boxes.
+For now we want to see all of the records so leave limit blank.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a JSON response of all of your environments.
+
+Getting an Environment by ID
+
+Step 1 - Logging in and getting the ID of the Joomla record.
+
+If you know the Joomla ID of the Environment you wish to get and know how to login please Skip to Step 2.
+
+Logging in is done by using the /login operation with the Http Method of POST since we will be sending our credentials.
+Expand the all the operations for Login by clicking the Expand Operations button or clicking on the Word Login then click the green /login operation.
+You Should see expanded information about the /login operation.
+Fill out the text boxes with your credentials.
+For this example you can set the username to admin and the password to admin.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a response indicating that your login was successful.
+
+Obtaining the record by id is done by using the /environments operation with the Http Method of GET.
+Expand the all the operations for Environment by clicking the Expand Operations button or clicking on the Word Environment then click the blue GET /environments operation.
+You Should see expanded information about the  blue GET /environments operation.
+You can then optionally set a limit of how many records you wish to show in your response by using the text boxes.
+For now we want to see all of the records so leave limit blank.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a JSON response that is fairly long. 
+Look for the Title of your Environment in the list and then find the correlated id in the same JSON object.
+This is your Joomla record id, remember it/write it down for the next step.
+
+Step 2 - getting the single environment by Joomla ID
+
+Obtaining the record by id is done by using the /environments{id} operation with the Http Method of GET.
+Expand the all the operations for Environment by clicking the Expand Operations button or clicking on the Word Environment then click the blue GET /environments{id} operation.
+You Should see expanded information about the  blue GET /environments{id} operation.
+You can now input the ID obtained in Step 1 into the text box labelled id.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a JSON response of your selected Environment.
+
+Delete an Environment
+
+If you know the Joomla ID of the Environment you wish to delete and know how to login please Skip to Step 2.
+
+Step 1 - Logging in and obtaining the Joomla ID of the record you wish to delete.
+
+Logging in is done by using the /login operation with the Http Method of POST since we will be sending our credentials.
+Expand the all the operations for Login by clicking the Expand Operations button or clicking on the Word Login then click the green /login operation.
+You Should see expanded information about the /login operation.
+Fill out the text boxes with your credentials.
+For this example you can set the username to admin and the password to admin.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a response indicating that your login was successful.
+
+Obtaining the id of the record you wish to delete is done by using the /environments operation with the Http Method of GET.
+Expand the all the operations for Environment by clicking the Expand Operations button or clicking on the Word Environment then click the blue GET /environments operation.
+You Should see expanded information about the  blue GET /environments operation.
+You can then optionally set a limit of how many records you wish to show in your response by using the text boxes.
+For now we want to see all of the records so leave limit blank.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a JSON response that is fairly long. 
+Look for the Title of your Environment in the list and then find the correlated id in the same JSON object.
+This is your Joomla record id, remember it/write it down for the next step.
+
+Step 2 - Deleting the Environment
+
+We can now Delete our selected Environment with the /environments operation with the Http Method of Delete.
+Expand the all the operations for environments by clicking the Expand Operations button or clicking on the Word Environment then the click the red Delete /environments operation.
+You Should see expanded information about the red Delete /environments operation.
+You can now input the ID obtained in Step 1 into the text box labelled id.
+Click the Try it Now! button on the bottom of the expanded operation.
+You should receive a response telling you that your delete was successful. 
+
+
+
+Posting an API
+Creates a new API that must be attached to an environment. If you do not know which environment you wish to attach your API to or the ID number please us GET /environments to get an ID or POST /environments to create a new one.
+
+Updating an API
+Uses the ID number of an API to update the information for that record. Does not change the ID number of the API if you do not know the ID number of the API you wish to update please use GET /apis.
+p

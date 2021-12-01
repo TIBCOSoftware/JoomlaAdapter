@@ -1,0 +1,158 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost/joomla/webservices",
+  "resourcePath": "/login",
+  "produces": [
+    "application/json",
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis": [
+
+   {"path":"/operations",
+ "operations":[{"method":"POST",
+ "summary":"Create a new Operation",
+ "notes":"",
+ "type":"void",
+ "nickname":"Create Operations",
+ "authorizations":{"oauth2":[{"scope":"write:pets",
+             "description":"Create a new Operation"}]},
+ "parameters":[
+ 
+		{
+		 "name":"title",
+         "description":"title of the operation you wish to create",
+         "required":true,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"api_id",
+         "description":"the id of the api the operation is attached to",
+         "required":true,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		  {
+		 "name":"path",
+         "description":"the URI path of the operation you wish to create",
+         "required":true,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"method",
+         "description":"http: method of the operation you wish to create",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		{
+		 "name":"summary",
+         "description":"a written summary of the operation you wish to create",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 }
+		 
+		 ],
+ "responseMessages":[{"code":400,
+         "message":"Invalid order"}]},
+		 
+		 {
+          "method": "GET",
+          "summary": "Get Operations",
+          "type": "string",
+          "nickname": "Get Operations",
+          "parameters": [
+            {"name":"limit",
+			"description":"how many records to show",
+			"required":false,
+			"type":"number",
+			"paramType":"body",
+			"allowMultiple":false},
+			    {"name":"id",
+			"description":"the id of the api whose operations you wish to view",
+			"required":false,
+			"type":"number",
+			"paramType":"body",
+			"allowMultiple":false}
+          ]
+        },
+        
+        {
+          "method": "PUT",
+          "summary": "modify an exisiting Operation",
+          "type": "string",
+          "nickname": "put OPerations",
+          "parameters": [
+       {
+              "name": "id",
+              "description": "id of the object you want to modify",
+              "required": true,
+              "type": "int",
+              "paramType": "body"
+            },
+			           {
+              "name": "title",
+              "description": "variable for changing the objects title",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+			       {
+              "name": "published",
+              "description": "toggle if the object is published: 1 -yes 0-no",
+              "required": false,
+              "type": "int",
+              "paramType": "body"
+            },
+			 {
+		 "name":"path",
+         "description":"the URI path of the operation you wish to modify",
+         "required":true,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"method",
+         "description":"http: method of the operation you wish to modify",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		{
+		 "name":"summary",
+         "description":"a written summary of the operation you wish to modify",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "delete OPerations",
+          "type": "string",
+          "nickname": "delete OPerations",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "id of the object you want to delete",
+              "required": true,
+              "type": "int",
+              "paramType": "path"
+            }
+		 ]}]}
+
+]}

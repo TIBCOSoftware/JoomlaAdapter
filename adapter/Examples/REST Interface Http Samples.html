@@ -1,0 +1,337 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"标题 1 Char";
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:24.0pt;
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+h2
+	{mso-style-link:"标题 2 Char";
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:18.0pt;
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"页眉 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	text-align:center;
+	layout-grid-mode:char;
+	border:none;
+	padding:0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"页脚 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+span.1Char
+	{mso-style-name:"标题 1 Char";
+	mso-style-link:"标题 1";
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+span.2Char
+	{mso-style-name:"标题 2 Char";
+	mso-style-link:"标题 2";
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+span.Char
+	{mso-style-name:"页眉 Char";
+	mso-style-link:页眉;}
+span.Char0
+	{mso-style-name:"页脚 Char";
+	mso-style-link:页脚;}
+.MsoChpDefault
+	{font-size:11.0pt;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><b><span lang=EN-US style='font-size:24.0pt;font-family:"Arial","sans-serif";
+color:#333333'>REST Interface Http Samples</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;line-height:normal'><b><span
+lang=EN-US style='font-size:15.0pt;font-family:"Arial","sans-serif";color:#333333'>Login</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>POST
+/dev/v1/login HTTP/1.1<br>
+Host: ggrigore-z800.na.tibco.com<br>
+Cache-Control: no-cache<br>
+Content-Type: multipart/form-data;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Content-Disposition:
+form-data; name=&quot;size&quot;originalContent-Disposition: form-data; name=&quot;username&quot;{{username}}Content-Disposition:
+form-data; name=&quot;password&quot;{{password}}</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;line-height:normal'><b><span
+lang=EN-US style='font-size:15.0pt;font-family:"Arial","sans-serif";color:#333333'>APIS</span></b></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;line-height:normal'><b><span
+lang=EN-US style='font-family:"Arial","sans-serif";color:#333333'>Get API by ID</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:12.0pt;
+margin-left:0cm;line-height:15.0pt'><span lang=EN-US style='font-size:10.5pt;
+font-family:"Arial","sans-serif";color:#333333'>GET /dev/v1/apis/{{id}}
+HTTP/1.1<br>
+Host: ggrigore-z800.na.tibco.com<br>
+Cache-Control: no-cache</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:12.0pt;
+margin-left:0cm;line-height:15.0pt'><b><span lang=EN-US style='font-size:10.5pt;
+font-family:"Arial","sans-serif";color:#333333'>Get API</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:12.0pt;
+margin-left:0cm;line-height:15.0pt'><span lang=EN-US style='font-size:10.5pt;
+font-family:"Arial","sans-serif";color:#333333'>GET /dev/v1/apis HTTP/1.1<br>
+Host: ggrigore-z800.na.tibco.com<br>
+Cache-Control: no-cache</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:12.0pt;
+margin-left:0cm;line-height:15.0pt'><b><span lang=EN-US style='font-size:10.5pt;
+font-family:"Arial","sans-serif";color:#333333'>Put API</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>PUT
+/dev/v1/apis HTTP/1.1<br>
+Host: ggrigore-z800.na.tibco.com<br>
+Cache-Control: no-cache<br>
+Content-Type: multipart/form-data; </span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Content-Disposition:
+form-data; name=&quot;size&quot;originalContent-Disposition: form-data;
+name=&quot;id&quot;{{id}}Content-Disposition: form-data;
+name=&quot;title&quot;{{title}}Content-Disposition: form-data;
+name=&quot;description&quot;{{description}}Content-Disposition: form-data;
+name=&quot;type&quot;{{type}}Content-Disposition: form-data;
+name=&quot;environment&quot;{{environment}}Content-Disposition: form-data;
+name=&quot;targetEnvironment&quot;{{targetEnvironment}}Content-Disposition:
+form-data; name=&quot;file&quot;{{file}}</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><b><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Post
+API</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>POST
+/dev/v1/apis HTTP/1.1<br>
+Host: ggrigore-z800.na.tibco.com<br>
+Cache-Control: no-cache<br>
+Content-Type: multipart/form-data; </span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Content-Disposition:
+form-data; name=&quot;size&quot;originalContent-Disposition: form-data;
+name=&quot;title&quot;{{title}}Content-Disposition: form-data;
+name=&quot;description&quot;{{description}}Content-Disposition: form-data;
+name=&quot;type&quot;{{type}}Content-Disposition: form-data; name=&quot;environment&quot;{{environment}}Content-Disposition:
+form-data;
+name=&quot;targetenvironment&quot;{{targetenvironment}}Content-Disposition:
+form-data; name=&quot;file&quot;{{file}}</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><b><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Delete
+API</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>DELETE
+/dev/v1/apis HTTP/1.1<br>
+Host: ggrigore-z800.na.tibco.com<br>
+id: {{id}}<br>
+Cache-Control: no-cache<br>
+Content-Type: multipart/form-data; </span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Content-Disposition:
+form-data; name=&quot;size&quot;original</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;line-height:normal'><b><span
+lang=EN-US style='font-size:15.0pt;font-family:"Arial","sans-serif";color:#333333'>Environments</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><b><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Get
+Environment by ID</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>GET
+/dev/v1/environments/{{id}} HTTP/1.1<br>
+Host: ggrigore-z800.na.tibco.com<br>
+Cache-Control: no-cache</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><b><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Get
+Environment</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>GET /dev/v1/environments
+HTTP/1.1<br>
+Host: ggrigore-z800.na.tibco.com<br>
+Cache-Control: no-cache</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><b><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Put
+Environment</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>PUT
+/dev/v1/environments HTTP/1.1<br>
+Host: ggrigore-z800.na.tibco.com<br>
+Cache-Control: no-cache<br>
+Content-Type: multipart/form-data;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Content-Disposition:
+form-data; name=&quot;size&quot;originalContent-Disposition: form-data;
+name=&quot;id&quot;{{id}}Content-Disposition: form-data;
+name=&quot;title&quot;{{title}}Content-Disposition: form-data;
+name=&quot;description&quot;{{description}}Content-Disposition: form-data;
+name=&quot;basePath&quot;{{basePath}}Content-Disposition: form-data;
+name=&quot;managedbygateway&quot;{{managedbygateway}}</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><b><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Post
+Environment</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>POST
+/dev/v1/environments HTTP/1.1<br>
+Host: ggrigore-z800.na.tibco.com<br>
+Cache-Control: no-cache<br>
+Content-Type: multipart/form-data; </span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Content-Disposition:
+form-data; name=&quot;size&quot;originalContent-Disposition: form-data;
+name=&quot;title&quot;{{title}}Content-Disposition: form-data;
+name=&quot;description&quot;{{description}}Content-Disposition: form-data;
+name=&quot;basePath&quot;{{basePath}}Content-Disposition: form-data; name=&quot;managedbygateway&quot;{{managedbygateway}}<a
+name="_GoBack"></a></span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><b><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Delete
+Environment</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>DELETE
+/dev/v1/environments HTTP/1.1<br>
+Host: ggrigore-z800.na.tibco.com<br>
+Cache-Control: no-cache<br>
+Content-Type: multipart/form-data; </span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>Content-Disposition:
+form-data; name=&quot;size&quot;original</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:15.0pt'><span lang=EN-US
+style='font-size:10.5pt;font-family:"Arial","sans-serif";color:#333333'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

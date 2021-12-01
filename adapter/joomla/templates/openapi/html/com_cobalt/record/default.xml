@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="CURLART">
+		<message>CURLARTDESCR</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request" label="CURLGP" addfieldpath="/administrator/components/com_cobalt/models/fields">
+			<field name="id" type="text" size="3" default="" label="CURLRECID" />
+		</fieldset>
+	</fields>
+</metadata>

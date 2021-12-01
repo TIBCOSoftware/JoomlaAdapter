@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="authentication">
+	<name>plg_authentication_email</name>
+	<author>Joomla! Project</author>
+	<creationDate>January 2014</creationDate>
+	<copyright>Copyright (C) 2013 - 2014 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>tpeng@tibco-support.com</authorEmail>
+	<authorUrl>www.tibco.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_AUTH_EMAIL_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="email">email.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_authentication_email.ini</language>
+		<language tag="en-GB">en-GB.plg_authentication_email.sys.ini</language>
+	</languages>
+</extension>

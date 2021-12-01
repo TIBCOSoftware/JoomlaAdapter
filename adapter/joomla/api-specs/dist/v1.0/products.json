@@ -1,0 +1,128 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost/joomla/webservices",
+  "resourcePath": "/login",
+  "produces": [
+    "application/json",
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis": [
+  
+  {"path":"/products",
+ "operations":[{"method":"POST",
+ "summary":"Create a new product",
+ "notes":"",
+ "type":"void",
+ "nickname":"Create products",
+ "authorizations":{"oauth2":[{"scope":"write:pets",
+             "description":"write to your pets"}]},
+ "parameters":[
+ {"name":"title",
+         "description":"title of the plan you wish to create",
+         "required":true,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		  {"name":"description",
+         "description":"description of the plan you wish to create",
+         "required":true,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"product_cat",
+         "description":"the category of the product you wish to create. accepts ReferenceData or MaketAnalysis",
+         "required":true,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"api_id_array",
+         "description":"an array of id's that are attached to this product. ",
+         "required":true,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false}
+		 ],
+ "responseMessages":[{"code":400,
+         "message":"Invalid order"}]},
+		 
+		 {
+          "method": "GET",
+          "summary": "Get products",
+          "type": "string",
+          "nickname": "Get products",
+          "parameters": [
+   {"name":"limit",
+			"description":"how many records to show",
+			"required":false,
+			"type":"number",
+			"paramType":"path",
+			"allowMultiple":false}
+          ]
+        },
+        
+        {
+          "method": "PUT",
+          "summary": "modify an existing product",
+          "type": "string",
+          "nickname": "put products",
+          "parameters": [
+       {
+              "name": "id",
+              "description": "id of the object you want to modify",
+              "required": true,
+              "type": "int",
+              "paramType": "body"
+            },
+			{"name":"title",
+         "description":"modify the title of the plan",
+         "required":false,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		  {"name":"description",
+         "description":"modify the description of the plan",
+         "required":false,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"product_cat",
+         "description":"modify the category of the product you wish to create. accepts ReferenceData or MaketAnalysis",
+         "required":false,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"api_id_array",
+         "description":"modify the array of id's that are attached to this product. ",
+         "required":false,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false},
+			       {
+              "name": "published",
+              "description": "toggle if the object is published: 1 -yes 0-no",
+              "required": false,
+              "type": "int",
+              "paramType": "body"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "delete products",
+          "type": "string",
+          "nickname": "delete products",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The Id of the object to be deleted",
+              "required": true,
+              "type": "int",
+              "paramType": "path"
+            }
+		 ]}]}
+  
+		 
+		 ]}

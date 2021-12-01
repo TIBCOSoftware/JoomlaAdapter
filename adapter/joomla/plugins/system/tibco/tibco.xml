@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>System - TIBCO OpenAPI Library</name>
+	<author>TIBCO Software Inc.</author>
+	<creationDate>October 2013</creationDate>
+	<copyright>Copyright (C) 2013 TIBCO Software, Inc. All rights reserved.</copyright>
+	<authorEmail>ux-dev@tibco.com</authorEmail>
+	<authorUrl>www.tibco.com</authorUrl>
+	<version>1.0</version>
+    <description>System Plugin to autoload the TIBCO OpenAPI Joomla Library.</description>
+ 
+    <files>
+        <filename plugin="tibco">tibco.php</filename>
+        <filename>tibco.xml</filename>
+        <filename>index.html</filename>
+    </files>
+</extension>

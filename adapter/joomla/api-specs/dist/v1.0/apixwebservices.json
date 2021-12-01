@@ -1,0 +1,843 @@
+{"apiVersion":"1.0.0",
+ "swaggerVersion":"1.2",
+ "basePath":"http://localhost/joomla/webservices",
+ "resourcePath":"/webservices",
+ "produces":["application/json"],
+ "apis":[
+  
+		 {"path":"/login",
+ "operations":[
+
+		 {
+          "method": "GET",
+          "summary": "Logs the User On",
+          "type": "string",
+          "nickname": "Logon",
+          "parameters": [
+            {
+              "name": "user",
+              "description": "Joomla User Login info",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+			{
+              "name": "password",
+              "description": "Joomla Password Login info",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ]
+        }
+]},
+  
+ {
+ "path":"/apis",
+ "operations":[
+ {
+ "method":"POST",
+ "summary":"Create a new API",
+ "notes":"",
+ "type":"void",
+ "nickname":"Create API",
+ "authorizations":{"oauth2":[{"scope":"write:pets",
+             "description":"write to your pets"}]},
+ "parameters":[
+			{
+              "name": "environment",
+              "description": "The id of the environment of the API",
+              "required": true,
+              "type": "int",
+              "paramType": "path"
+            },
+		 {
+		 "name":"jsonfile",
+         "description":"a Swagger representation of operations for auto importing",
+         "required":false,
+         "type":"JSON",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 	{
+              "name": "apitype",
+              "description": "The type of the API accepts REST / SOAP",
+              "required": false,
+              "type": "string",
+              "paramType": "path"
+            },
+				
+				{
+              "name": "proxy",
+              "description": "a toggle to create a Proxy for API",
+              "required": false,
+              "type": "boolean",
+              "paramType": "path"
+            },
+		 {
+		 "name":"title",
+         "description":"title of the API you wish to create",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 }
+		 
+		],
+ "responseMessages":[{"code":400,
+         "message":"Invalid order"}]},
+		 
+		 {
+          "method": "GET",
+          "summary": "Get api's",
+          "type": "string",
+          "nickname": "Get APIS",
+          "parameters": [
+			 {"name":"limit",
+			"description":"how many records to show",
+			"required":false,
+			"type":"number",
+			"paramType":"path",
+			"allowMultiple":false}
+          ]
+        },
+        
+        {
+          "method": "PUT",
+          "summary": "put api's",
+          "type": "string",
+          "nickname": "put APIS",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "id of the object you want to modify",
+              "required": true,
+              "type": "int",
+              "paramType": "body"
+            },
+			           {
+              "name": "title",
+              "description": "variable for changing the objects title",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+			       {
+              "name": "published",
+              "description": "toggle if the object is published: 1 -yes 0-no",
+              "required": false,
+              "type": "int",
+              "paramType": "body"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "delete api's",
+          "type": "string",
+          "nickname": "delete APIS",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "id of the object you want to delete",
+              "required": true,
+              "type": "int",
+              "paramType": "path"
+            }
+		 ]}]},
+		 
+		 
+		 {"path":"/operations",
+ "operations":[{"method":"POST",
+ "summary":"Create a new Operation",
+ "notes":"",
+ "type":"void",
+ "nickname":"Create Operations",
+ "authorizations":{"oauth2":[{"scope":"write:pets",
+             "description":"Create a new Operation"}]},
+ "parameters":[
+ 
+		{
+		 "name":"title",
+         "description":"title of the operation you wish to create",
+         "required":true,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"api_id",
+         "description":"the id of the api the operation is attached to",
+         "required":true,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		  {
+		 "name":"path",
+         "description":"the URI path of the operation you wish to create",
+         "required":true,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"method",
+         "description":"http: method of the operation you wish to create",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		{
+		 "name":"summary",
+         "description":"a written summary of the operation you wish to create",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 }
+		 
+		 ],
+ "responseMessages":[{"code":400,
+         "message":"Invalid order"}]},
+		 
+		 {
+          "method": "GET",
+          "summary": "Get Operations",
+          "type": "string",
+          "nickname": "Get Operations",
+          "parameters": [
+            {"name":"limit",
+			"description":"how many records to show",
+			"required":false,
+			"type":"number",
+			"paramType":"body",
+			"allowMultiple":false},
+			    {"name":"id",
+			"description":"the id of the api whose operations you wish to view",
+			"required":false,
+			"type":"number",
+			"paramType":"body",
+			"allowMultiple":false}
+          ]
+        },
+        
+        {
+          "method": "PUT",
+          "summary": "modify an exisiting Operation",
+          "type": "string",
+          "nickname": "put OPerations",
+          "parameters": [
+       {
+              "name": "id",
+              "description": "id of the object you want to modify",
+              "required": true,
+              "type": "int",
+              "paramType": "body"
+            },
+			           {
+              "name": "title",
+              "description": "variable for changing the objects title",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+			       {
+              "name": "published",
+              "description": "toggle if the object is published: 1 -yes 0-no",
+              "required": false,
+              "type": "int",
+              "paramType": "body"
+            },
+			 {
+		 "name":"path",
+         "description":"the URI path of the operation you wish to modify",
+         "required":true,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"method",
+         "description":"http: method of the operation you wish to modify",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		{
+		 "name":"summary",
+         "description":"a written summary of the operation you wish to modify",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "delete OPerations",
+          "type": "string",
+          "nickname": "delete OPerations",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "id of the object you want to delete",
+              "required": true,
+              "type": "int",
+              "paramType": "path"
+            }
+		 ]}]},
+		 
+		 
+		 {"path":"/organizations",
+ "operations":[{"method":"POST",
+ "summary":"Create a new organization",
+ "notes":"",
+ "type":"void",
+ "nickname":"Create organizations",
+ "authorizations":{"oauth2":[{"scope":"write:pets",
+             "description":"write to your pets"}]},
+ "parameters":[
+			           {
+              "name": "title",
+              "description": "title of the organization",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+			       {
+              "name": "type",
+              "description": "accepts either host or partner",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+			{
+              "name": "email",
+              "description": "accepts an email associated with the organizations",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+		 ],
+ "responseMessages":[{"code":400,
+         "message":"Invalid order"}]},
+		 
+		 {
+          "method": "GET",
+          "summary": "Get organizations",
+          "type": "string",
+          "nickname": "Get organizations",
+          "parameters": [
+      {"name":"limit",
+			"description":"how many records to show",
+			"required":false,
+			"type":"number",
+			"paramType":"path",
+			"allowMultiple":false}
+          ]
+        },
+        
+        {
+          "method": "PUT",
+          "summary": "modify an existing organizations",
+          "type": "string",
+          "nickname": "put organizations",
+          "parameters": [
+       {
+              "name": "id",
+              "description": "id of the object you want to modify",
+              "required": true,
+              "type": "int",
+              "paramType": "body"
+            },
+			           {
+              "name": "title",
+              "description": "variable for changing the objects title",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+			{
+              "name": "type",
+              "description": "accepts either host or partner",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+			{
+              "name": "email",
+              "description": "accepts an email associated with the organizations",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "delete an organizations",
+          "type": "string",
+          "nickname": "delete organizations",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The Id of the object to be deleted",
+              "required": true,
+              "type": "int",
+              "paramType": "path"
+            }
+		 ]}]},
+		 
+		 
+		 {"path":"/plans",
+ "operations":[{"method":"POST",
+ "summary":"Create a new plan",
+ "notes":"",
+ "type":"void",
+ "nickname":"Create plan",
+ "authorizations":{"oauth2":[{"scope":"write:pets",
+             "description":"write to your pets"}]},
+ "parameters":[
+ 
+ {
+		 "name":"title",
+         "description":"title of the plan you wish to create",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"product_id",
+         "description":"the id of the product the plan is attached to",
+         "required":true,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		  {
+		 "name":"level",
+         "description":"the level of the plan you wish to create, accepts custom, level 1, level 2 etc... to level 5",
+         "required":true,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"details",
+         "description":"details of the plan",
+         "required":true,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		{
+		 "name":"quotalimit",
+         "description":"the calls per day allowed for this plan",
+         "required":true,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"ratelimit",
+         "description":"the calls per second allowed for this plan",
+         "required":true,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"price",
+         "description":"the price or keyword for this plan",
+         "required":false,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false
+		 }
+		 ],
+ "responseMessages":[{"code":400,
+         "message":"Invalid order"}]},
+		 
+		 {
+          "method": "GET",
+          "summary": "Get plan",
+          "type": "string",
+          "nickname": "Get plan",
+          "parameters": [
+{"name":"limit",
+			"description":"how many records to show",
+			"required":false,
+			"type":"number",
+			"paramType":"path",
+			"allowMultiple":false},
+			{"name":"product_id",
+			"description":"show plans for a specific product",
+			"required":false,
+			"type":"number",
+			"paramType":"path",
+			"allowMultiple":false}
+          ]
+        },
+        
+        {
+          "method": "PUT",
+          "summary": "modify an existing plan",
+          "type": "string",
+          "nickname": "put plan",
+          "parameters": [
+       {
+              "name": "id",
+              "description": "id of the object you want to modify",
+              "required": true,
+              "type": "int",
+              "paramType": "body"
+            },
+		{
+			"name":"title",
+         "description":"modify the title of the plan.",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"product_id",
+         "description":"modify which product the plan is attached to",
+         "required":false,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		  {
+		 "name":"level",
+         "description":"the level of the plan you wish to create, accepts custom, level 1, level 2 etc... to level 5",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"details",
+         "description":"details of the plan",
+         "required":false,
+         "type":"String",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		{
+		 "name":"quotalimit",
+         "description":"the calls per day allowed for this plan",
+         "required":false,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"ratelimit",
+         "description":"the calls per second allowed for this plan",
+         "required":false,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false
+		 },
+		 {
+		 "name":"price",
+         "description":"the price or keyword for this plan",
+         "required":false,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false
+		 }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "delete a plan",
+          "type": "string",
+          "nickname": "delete plan",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The Id of the object to be deleted",
+              "required": true,
+              "type": "int",
+              "paramType": "path"
+            }
+		 ]}]},
+		 
+		 
+		 {"path":"/products",
+ "operations":[{"method":"POST",
+ "summary":"Create a new product",
+ "notes":"",
+ "type":"void",
+ "nickname":"Create products",
+ "authorizations":{"oauth2":[{"scope":"write:pets",
+             "description":"write to your pets"}]},
+ "parameters":[
+ {"name":"title",
+         "description":"title of the plan you wish to create",
+         "required":true,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		  {"name":"description",
+         "description":"description of the plan you wish to create",
+         "required":true,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"product_cat",
+         "description":"the category of the product you wish to create. accepts ReferenceData or MaketAnalysis",
+         "required":true,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"api_id_array",
+         "description":"an array of id's that are attached to this product. ",
+         "required":true,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false}
+		 ],
+ "responseMessages":[{"code":400,
+         "message":"Invalid order"}]},
+		 
+		 {
+          "method": "GET",
+          "summary": "Get products",
+          "type": "string",
+          "nickname": "Get products",
+          "parameters": [
+   {"name":"limit",
+			"description":"how many records to show",
+			"required":false,
+			"type":"number",
+			"paramType":"path",
+			"allowMultiple":false}
+          ]
+        },
+        
+        {
+          "method": "PUT",
+          "summary": "modify an existing product",
+          "type": "string",
+          "nickname": "put products",
+          "parameters": [
+       {
+              "name": "id",
+              "description": "id of the object you want to modify",
+              "required": true,
+              "type": "int",
+              "paramType": "body"
+            },
+			{"name":"title",
+         "description":"modify the title of the plan",
+         "required":false,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		  {"name":"description",
+         "description":"modify the description of the plan",
+         "required":false,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"product_cat",
+         "description":"modify the category of the product you wish to create. accepts ReferenceData or MaketAnalysis",
+         "required":false,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"api_id_array",
+         "description":"modify the array of id's that are attached to this product. ",
+         "required":false,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false},
+			       {
+              "name": "published",
+              "description": "toggle if the object is published: 1 -yes 0-no",
+              "required": false,
+              "type": "int",
+              "paramType": "body"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "delete products",
+          "type": "string",
+          "nickname": "delete products",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The Id of the object to be deleted",
+              "required": true,
+              "type": "int",
+              "paramType": "path"
+            }
+		 ]}]},
+		 
+		 
+		 {"path":"/subscriptions",
+ "operations":[{"method":"POST",
+ "summary":"Create a new subscriptions",
+ "notes":"",
+ "type":"void",
+ "nickname":"Create subscriptions",
+ "authorizations":{"oauth2":[{"scope":"write:pets",
+             "description":"write to your pets"}]},
+ "parameters":[
+ 
+ {"name":"product_id",
+         "description":"the id of the product this subscription pertains to",
+         "required":true,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false},
+		  {"name":"plan_id",
+         "description":"the id of the plan this subscription pertains to ",
+         "required":true,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false},
+		  {"name":"organization_id",
+         "description":"the id of the organization  this subscription pertains to",
+         "required":true,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"startdate",
+         "description":"the start date of the subscription",
+         "required":true,
+         "type":"date",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"enddate",
+         "description":"the end date of the subscription",
+         "required":true,
+         "type":"date",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"status",
+         "description":"the status of the subscription active/inactive",
+         "required":true,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"description",
+         "description":"the description of the subscription",
+         "required":false,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false}
+		 
+		 ],
+ "responseMessages":[{"code":400,
+         "message":"Invalid order"}]},
+		 
+		 {
+          "method": "GET",
+          "summary": "Get subscriptions",
+          "type": "string",
+          "nickname": "Get subscriptions",
+          "parameters": [
+{"name":"limit",
+			"description":"how many records to show",
+			"required":false,
+			"type":"number",
+			"paramType":"path",
+			"allowMultiple":false},
+			{"name":"plan_id",
+			"description":"shows all the subscriptions to plan with id",
+			"required":false,
+			"type":"number",
+			"paramType":"path",
+			"allowMultiple":false}
+          ]
+        },
+        
+        {
+          "method": "PUT",
+          "summary": "modify an exisiting  subscriptions",
+          "type": "string",
+          "nickname": "put subscriptions",
+          "parameters": [
+       {
+              "name": "id",
+              "description": "id of the object you want to modify",
+              "required": true,
+              "type": "int",
+              "paramType": "body"
+            },
+			 {"name":"product_id",
+         "description":"modify the id of the product this subscription pertains to with a new id",
+         "required":false,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false},
+		  {"name":"plan_id",
+         "description":"modify the plan this subscription pertains to with a new id",
+         "required":false,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false},
+		  {"name":"organization_id",
+         "description":"modify the organization this subscription pertains to  with a new id",
+         "required":false,
+         "type":"int",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"startdate",
+         "description":"modify the start date of the subscription",
+         "required":false,
+         "type":"date",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"enddate",
+         "description":"modify the end date of the subscription",
+         "required":false,
+         "type":"date",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"status",
+         "description":"modify the status of the subscription active/inactive",
+         "required":false,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false},
+		 {"name":"description",
+         "description":"modify the description of the subscription",
+         "required":false,
+         "type":"string",
+         "paramType":"body",
+         "allowMultiple":false}
+
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "delete subscriptions",
+          "type": "string",
+          "nickname": "delete subscriptions",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The Id of the object to be deleted",
+              "required": true,
+              "type": "int",
+              "paramType": "path"
+            }
+		 ]}]}
+		 
+		 
+]
+
+ 
+ }

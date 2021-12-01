@@ -1,0 +1,174 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"页眉 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	text-align:center;
+	layout-grid-mode:char;
+	border:none;
+	padding:0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"页脚 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+span.Char
+	{mso-style-name:"页眉 Char";
+	mso-style-link:页眉;}
+span.Char0
+	{mso-style-name:"页脚 Char";
+	mso-style-link:页脚;}
+.MsoChpDefault
+	{font-size:11.0pt;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><b><span lang=EN-US style='font-size:24.0pt;font-family:"Arial","sans-serif";
+color:#333333'>REST Interface cURL Samples</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt;line-height:
+115%'>Login</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>curl -X POST -H &quot;Cache-Control:
+no-cache&quot; -H&nbsp; &quot;Content-Type: multipart/form-data; &quot; -F
+&quot;size=original&quot; -F &quot;username={{username}}&quot; -F
+&quot;password={{password}}&quot; 'http://ggrigore-z800.na.tibco.com/dev/v1/login'</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt;line-height:
+115%'>APIS</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Get APIS by ID</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>curl -X GET -H &quot;Cache-Control:
+no-cache&quot; -H 'http://ggrigore-z800.na.tibco.com/dev/v1/apis/{{id}}'</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Get APIS</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>curl -X GET -H &quot;Cache-Control:
+no-cache&quot; -H 'http://ggrigore-z800.na.tibco.com/dev/v1/apis'</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Put APIS</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>curl -X PUT -H &quot;Cache-Control:
+no-cache&quot; -H -H &quot;Content-Type: multipart/form-data; &quot; -F
+&quot;size=original&quot; -F &quot;id={{id}}&quot; -F
+&quot;title={{title}}&quot; -F &quot;description={{description}}&quot; -F
+&quot;type={{type}}&quot; -F &quot;environment={{environment}}&quot; -F
+&quot;targetEnvironment={{targetEnvironment}}&quot; -F &quot;file={{file}}&quot;
+'http://ggrigore-z800.na.tibco.com/dev/v1/apis'</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Post APIS</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>curl -X POST -H &quot;Cache-Control:
+no-cache&quot; -H &quot;Content-Type: multipart/form-data; &quot; -F
+&quot;size=original&quot; -F &quot;title={{title}}&quot; -F
+&quot;description={{description}}&quot; -F &quot;type={{type}}&quot; -F
+&quot;environment={{environment}}&quot; -F
+&quot;targetenvironment={{targetenvironment}}&quot; -F
+&quot;file={{file}}&quot; 'http://ggrigore-z800.na.tibco.com/dev/v1/apis'</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Delete APIS</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>curl -X DELETE -H &quot;id: {{id}}&quot; -H
+&quot;Cache-Control: no-cache&quot; -H &quot;Content-Type: multipart/form-data;
+&quot; -F &quot;size=original&quot;
+'http://ggrigore-z800.na.tibco.com/dev/v1/apis'</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt;line-height:
+115%'>Environments</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Get Environment by ID</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>curl -X GET -H &quot;Cache-Control:
+no-cache&quot; -H
+'http://ggrigore-z800.na.tibco.com/dev/v1/environments/{{id}}'</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Get Environments</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>curl -X GET -H &quot;Cache-Control:
+no-cache&quot; -H&nbsp; 'http://ggrigore-z800.na.tibco.com/dev/v1/environments'</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Put Environment</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>curl -X PUT -H &quot;Cache-Control:
+no-cache&quot; -H &quot;Content-Type: multipart/form-data; &quot; -F
+&quot;size=original&quot; -F &quot;id={{id}}&quot; -F
+&quot;title={{title}}&quot; -F &quot;description={{description}}&quot; -F
+&quot;basePath={{basePath}}&quot; -F
+&quot;managedbygateway={{managedbygateway}}&quot;
+'http://ggrigore-z800.na.tibco.com/dev/v1/environments'</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Post Environment</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>curl -X POST -H &quot;Cache-Control:
+no-cache&quot; -H &quot;Content-Type: multipart/form-data; &quot; -F &quot;size=original&quot;
+-F &quot;title={{title}}&quot; -F &quot;description={{description}}&quot; -F
+&quot;basePath={{basePath}}&quot; -F
+&quot;managedbygateway={{managedbygateway}}&quot;
+'http://ggrigore-z800.na.tibco.com/dev/v1/environments'</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Delete Environment by ID</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>curl -X DELETE -H &quot;Cache-Control: no-cache&quot;
+-H &quot;Content-Type: multipart/form-data; &quot; -F &quot;size=original&quot;
+'http://ggrigore-z800.na.tibco.com/dev/v1/environments'<a name="_GoBack"></a></span></p>
+
+</div>
+
+</body>
+
+</html>

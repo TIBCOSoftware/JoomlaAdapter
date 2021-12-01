@@ -1,0 +1,202 @@
+{
+  "apiVersion":"1.0",
+  "swaggerVersion":"1.2",
+  "basePath":"http://localhost:9222/",
+  "resourcePath":"/Books",
+  "apis":[
+    {
+      "path":"/Books/BookOperations/Title/{Title}",
+      "description":"Operations about books",
+      "operations":[
+        {
+          "httpMethod":"GET",
+		  "timeout": 10000,
+          "summary":"Find book by Title",
+		  "produces": [
+		  "application/json"
+		  ],
+          "notes":"Returns a book based on Title",
+          "responseClass":"Book",
+          "nickname":"GetBookByTitle",
+          "parameters":[
+            {
+              "name":"Title",
+              "description":"Title of book that needs to be fetched",
+              "paramType":"path",
+              "required":true,
+              "allowMultiple":false,
+              "type":"string"
+            }
+          ],
+          "errorResponses":[
+            {
+              "code":400,
+              "message":"Invalid book Title supplied"
+            },
+            {
+              "code":404,
+              "message":"Book not found"
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "path":"/Books/BookOperations/Author/{Author}",
+      "description":"Operations about books",
+      "operations":[
+        {
+          "httpMethod":"GET",
+          "summary":"Find book by Author",
+          "notes":"Returns a book based on Author",
+          "responseClass":"Book",
+          "nickname":"GetBookByAuthor",
+          "parameters":[
+            {
+              "name":"Author",
+              "description":"Author of book that needs to be fetched",
+              "paramType":"path",
+              "required":true,
+              "allowMultiple":false,
+              "type":"string"
+            }
+          ],
+          "errorResponses":[
+            {
+              "code":400,
+              "message":"Invalid book author supplied"
+            },
+            {
+              "code":404,
+              "message":"Book not found"
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "path":"/Books/BookOperations/ISBN/{ISBN}",
+      "description":"Operations about books",
+      "operations":[
+        {
+          "httpMethod":"GET",
+          "summary":"Find book by ISBN",
+          "notes":"Returns a book based on ISBN",
+          "responseClass":"Book",
+          "nickname":"GetBookByISBN",
+          "parameters":[
+            {
+              "name":"ISBN",
+              "description":"ISBN of book that needs to be fetched",
+              "paramType":"path",
+              "required":true,
+              "allowMultiple":false,
+              "type":"string"
+            }
+          ],
+          "errorResponses":[
+            {
+              "code":400,
+              "message":"Invalid book ISBN supplied"
+            },
+            {
+              "code":404,
+              "message":"Book not found"
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "path":"/Books/BookOperations/Publisher/{Publisher}",
+      "description":"Operations about books",
+      "operations":[
+        {
+          "httpMethod":"GET",
+          "summary":"Find book by Publisher",
+          "notes":"Returns a book based on Publisher",
+          "responseClass":"Book",
+          "nickname":"GetBookByPublisher",
+          "parameters":[
+            {
+              "name":"Publisher",
+              "description":"Publisher of book that needs to be fetched",
+              "paramType":"path",
+              "required":true,
+              "allowMultiple":false,
+              "type":"string"
+            }
+          ],
+          "errorResponses":[
+            {
+              "code":400,
+              "message":"Invalid book Publisher supplied"
+            },
+            {
+              "code":404,
+              "message":"Book not found"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path":"/Books/BookOperations",
+      "description":"Operations about books",
+      "operations":[
+        {
+          "httpMethod":"POST",
+          "summary":"Add a new book to the store",
+          "responseClass":"SuccessResponse",
+          "nickname":"addBook",
+          "parameters":[
+            {
+              "description":"Book object that needs to be added to the store",
+              "paramType":"body",
+              "required":true,
+              "allowMultiple":false,
+              "type":"Book"
+            }
+          ],
+          "errorResponses":[
+            {
+              "code":405,
+              "message":"Invalid input"
+            }
+          ]
+        }
+	  ]
+	}
+  ],
+  "models":{
+    "Book":{
+      "properties":{
+        "Title":{
+          "type":"string"
+        },
+        "Author":{
+          "type":"string"
+        },
+		"ISBN":{
+          "type":"string"
+        },
+		"Date":{
+          "type":"string"
+        },
+		"Publisher":{
+          "type":"string"
+        }
+      }
+    },
+	"SuccessResponse":{
+      "properties":{
+        "Code":{
+          "type":"string"
+        },
+        "Message":{
+          "type":"string"
+        }
+      }
+    }
+ }
+}

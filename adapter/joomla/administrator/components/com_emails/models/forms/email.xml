@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			id="id"
+			name="id"
+			type="text"
+			default="0"
+			readonly="true"
+			class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description ="JGLOBAL_FIELD_ID_DESC" />
+		<field
+			name="subject"
+			type="text"
+			class="inputbox"
+			label="COM_EMAILS_FIELD_SUBJECT_LABEL"
+			description="COM_EMAILS_FIELD_SUBJECT_DESC"
+			size="50"
+			required="true" />
+
+		<field
+			name="isHTML"
+			type="list"
+			label="COM_EMAILS_FIELD_TYPE_LABEL"
+			description="COM_EMAILS_FIELD_TYPE_DESC"
+			class="inputbox small"
+			size="1"
+			default="0"
+			required="true" >
+			<option
+				value="0">COM_EMAILS_FIELD_TYPE_TEXT</option>
+			<option
+				value="1">COM_EMAILS_FIELD_TYPE_HTML</option>
+		</field>
+
+		<field
+			name="alias"
+			type="text"
+			class="inputbox"
+			label="COM_EMAILS_FIELD_ALIAS_LABEL"
+			description="COM_EMAILS_FIELD_ALIAS_DESC"
+			size="50"
+			required="true" />
+
+		<field
+			name="content"
+			type="textarea"
+			class="inputbox"
+			label="COM_EMAILS_FIELD_CONTENT_LABEL"
+			description="COM_EMAILS_FIELD_CONTENTT_DESC"
+			required="true"
+			size="40"
+			rows="10"
+			cols="80"
+			style="width:55%"/>
+		<field
+			name="language"
+			type="hidden"
+			id="language"
+			default="english"
+			class="readonly"
+			label="language"
+			size="20"
+			readonly="true"
+			filter="unset" />
+		<field
+			name="created"
+			type="hidden"
+			id="created"
+			class="readonly"
+			label="COM_EMAILS_FIELD_CREATED_DATE_LABEL"
+			size="20"
+			readonly="true" />
+			<field
+				name="created_by"
+				type="hidden"
+				id="created_by"
+				class="readonly"
+				label="COM_EMAILS_FIELD_CREATED_DATE_LABEL"
+				size="20"
+				readonly="true" />
+		<field
+			name="published"
+			type="hidden"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			required="true"
+			default="1" />
+
+
+
+		<field
+			name="last_modified"
+			type="hidden"
+			id="last_modified"
+			class="readonly"
+			label="COM_EMAILS_FIELD_UPDATED_DATE_LABEL"
+			size="20"
+			readonly="true" />
+
+		<field
+			name="last_modified_by"
+			type="hidden"
+			id="last_modified_by"
+			class="readonly"
+			label="COM_EMAILS_FIELD_UPDATED_DATE_LABEL"
+			size="20"
+			readonly="true" />
+
+	</fieldset>
+</form>

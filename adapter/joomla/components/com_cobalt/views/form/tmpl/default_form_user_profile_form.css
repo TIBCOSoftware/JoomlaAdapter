@@ -1,0 +1,14 @@
+#asg-userprofile-form{}
+
+#asg-userprofile-form #fld-47,
+#asg-userprofile-form #fld-49,
+#asg-userprofile-form #fld-50,
+#asg-userprofile-form #fld-51,
+#asg-userprofile-form #fld-52,
+#asg-userprofile-form #fld-59,
+#asg-userprofile-form #fld-68,
+#asg-userprofile-form #fld-77,
+#asg-userprofile-form #fld-88
+{
+  display: none;
+}

@@ -1,0 +1,144 @@
+.request {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+.request-thead{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.request-thead h2{
+    font-size: 14px;
+}
+
+
+.content.request-tr{
+    background: #fff;
+    min-height: 202px !important;
+}
+
+.request-td-rowspan{
+    padding: 10px;
+
+    max-width: 220px;
+    background: #fff;
+}
+.request-td-rowspan li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.request-td{
+    line-height: 30px;
+}
+.request-td .status:before{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    background: #fff;
+}
+.request-td .label-pending:before{
+    background: #ff0;
+}
+.request-td .label-approved:before{
+    background: #0f0;
+}
+.request-td .label-rejected:before{
+    background: #f00;
+}
+.request-td .label-cancelled:before{
+    background: #FF7F04 ;
+}
+.request-accordion .request-product-thumbnail, .plan-name img{
+    display: inline-block;
+    padding-right: 10px;
+    width: 35px;
+}
+.request-accordion-col2{
+    margin-top: 10px;
+}
+.request-accordion-col2 > p{
+    display: inline-block;
+}
+.request-accordion-col2 .plan-status, .request_list .plan-status{
+    padding: 7px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+.minH{
+    min-height: 0!important;
+}
+
+.accordion-heading.collapsed .arrowR, .accordion-heading .arrowR{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../images/arrow-right.png) no-repeat left 0;
+}
+.accordion-heading .arrowR {
+    background: url(../images/arrow-down.png) no-repeat left 0;
+}
+
+.accordion-heading.collapsed.accordion-request{
+    border: none;
+}
+.accordion-heading.accordion-request{
+    clear: both;
+    border-bottom: 1px solid #ccc ;
+    margin-bottom: 10px;
+}
+.accordion-heading.accordion-request:last-child{
+    border: none !important;
+}
+.accordion-body .accordion-inner{
+    border-top: none;
+ }
+
+.modalStatus{
+    font-size: 14px;
+    color: #000;
+}
+
+.request_list{
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+.word-wrap{
+   word-wrap:break-word;
+   overflow:hidden;
+}
+.btn.submit-approve-request{
+    margin-top: 10px !important;
+}
+
+
+.plan-book{
+    width: 20%;
+}
+.requestPlan{
+    color: #000 !important;
+}
+.plan-requester{
+    display: block;
+    margin-top: 105px;
+}
+
+.plan-level{
+    font-weight: normal;
+}
+
+.requestBorder{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.calendar{
+    position: fixed !important;
+}
+
+#approveModal.request-modal, #rejectModal.request-modal{
+    width: 730px !important;
+    margin: -200px 0 0 -365px;
+}

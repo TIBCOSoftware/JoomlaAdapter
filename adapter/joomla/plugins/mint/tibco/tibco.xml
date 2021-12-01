@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="mint">
+	<name>Tibco - Plugins - Manager</name>
+    <author>Jacky</author>
+    <creationDate>Dec 25 2013</creationDate>
+    <copyright>TIBCO Software Inc.</copyright>
+    <license>@license GNU General Public License version 2; see LICENSE.txt</license>
+    <authorEmail>love0.0chen@gmail.com</authorEmail>
+    <authorUrl>http://www.webhulu.com</authorUrl>
+	<version>1.0.1</version>
+
+	<files>
+		<filename plugin="tibco">tibco.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

@@ -1,0 +1,51 @@
+table.application-list
+{
+  width:100%;
+  margin-bottom: 10px;
+}
+
+table.application-list dd{
+  position: relative;
+  margin: 0;
+}
+table.application-list .app-list-description:before{
+  content: 'Description';
+}
+
+table.application-list .app-list-detail
+{
+  background: #eee;
+  display: none;
+}
+
+.app-list-detail-des{
+  float: left;
+  width:70%;
+}
+
+.app-list-detail-crs
+{
+  width: auto;
+  overflow: hidden;
+}
+
+span.icon-unfold{
+  border-top: 10px solid white;
+  border-bottom: 15px solid white;
+  border-right: 10px solid white;
+  border-left: 15px solid #eee;
+  font-size: 0px;
+  width: 0px!important;
+  height: 0px!important;
+  float: left;
+  position: relative;
+  top:10px;
+  cursor: pointer;
+}
+
+span.icon-unfold.on{
+  border-top: 15px solid #eee;
+  border-bottom: 10px solid white;
+  border-right: 15px solid white;
+  border-left: 10px solid white;
+}

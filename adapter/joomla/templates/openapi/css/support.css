@@ -1,0 +1,55 @@
+#support_area{
+  margin:25px;
+}
+
+#support_area form{
+  width:65%;
+  float:left;
+  overflow:hidden;
+}
+
+#support_area form p{
+  margin-top:25px;
+}
+
+#support_area form textarea{
+  width:90%;
+  max-width:95%;
+  height:100px;
+}
+
+#support_area form button.btn{
+  margin-top:50px;
+}
+
+#support_area .right_info{
+  width:35%;
+  height:100%;
+  float:right;
+  margin-top:30px;
+  overflow:hidden;
+}
+
+#support_area .right_info div{
+  border:1px solid #777;
+  margin:0 0 20px 10px;
+  background:#f2f2f2;
+  padding:5px 15px;
+}
+
+#support_area .right_info div ul{
+  list-style:none;
+  margin:0px;
+}
+
+#support_area .right_info div ul li{
+  width:100%;
+  height:60px;
+  margin:10px auto;
+  overflow:hidden;
+}
+
+#support_area .right_info div ul li img{
+	margin-right:10px;
+	float:left;
+}

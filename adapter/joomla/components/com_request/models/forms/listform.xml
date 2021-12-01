@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_REQUEST_FORM_LBL_LIST_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="text" size="40" class="inputbox"
+        
+            label="COM_REQUEST_FORM_LBL_LIST_CREATED_BY"
+            description="COM_REQUEST_FORM_DESC_LIST_CREATED_BY" 
+         default="0" 
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="requested_by" type="calendar" class="inputbox"
+         required="true" 
+        
+         default="0000-00-00 00:00:00" 
+        
+            label="COM_REQUEST_FORM_LBL_LIST_REQUESTED_BY"
+            description="COM_REQUEST_FORM_DESC_LIST_REQUESTED_BY" 
+        filter="safehtml" /> 
+
+       <field name="product" type="text" size="40" class="inputbox"
+        
+            label="COM_REQUEST_FORM_LBL_LIST_PRODUCT"
+            description="COM_REQUEST_FORM_DESC_LIST_PRODUCT" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="product_id" type="text" size="40" class="inputbox"
+        
+            label="COM_REQUEST_FORM_LBL_LIST_PRODUCT_ID"
+            description="COM_REQUEST_FORM_DESC_LIST_PRODUCT_ID" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="status" type="text" size="40" class="inputbox"
+        
+            label="COM_REQUEST_FORM_LBL_LIST_STATUS"
+            description="COM_REQUEST_FORM_DESC_LIST_STATUS" 
+         default="1" 
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="updated" type="calendar" class="inputbox"
+         required="true" 
+        
+         default="0000-00-00 00:00:00" 
+        
+            label="COM_REQUEST_FORM_LBL_LIST_UPDATED"
+            description="COM_REQUEST_FORM_DESC_LIST_UPDATED" 
+        filter="safehtml" /> 
+
+       <field name="plan" type="text" size="40" class="inputbox"
+        
+            label="COM_REQUEST_FORM_LBL_LIST_PLAN"
+            description="COM_REQUEST_FORM_DESC_LIST_PLAN" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="plan_id" type="text" size="40" class="inputbox"
+        
+            label="COM_REQUEST_FORM_LBL_LIST_PLAN_ID"
+            description="COM_REQUEST_FORM_DESC_LIST_PLAN_ID" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="org_id" type="text" size="40" class="inputbox"
+        
+            label="COM_REQUEST_FORM_LBL_LIST_ORG_ID"
+            description="COM_REQUEST_FORM_DESC_LIST_ORG_ID" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="user_note" type="editor" buttons="true"
+        class="inputbox"
+        filter="safehtml"
+         required="true" 
+        
+        
+        
+            label="COM_REQUEST_FORM_LBL_LIST_USER_NOTE"
+            description="COM_REQUEST_FORM_DESC_LIST_USER_NOTE"  /> 
+
+       <field name="admin_note" type="editor" buttons="true"
+        class="inputbox"
+        filter="safehtml"
+         required="true" 
+        
+        
+        
+            label="COM_REQUEST_FORM_LBL_LIST_ADMIN_NOTE"
+            description="COM_REQUEST_FORM_DESC_LIST_ADMIN_NOTE"  /> 
+
+       <field name="custom" type="text" size="40" class="inputbox"
+        
+            label="COM_REQUEST_FORM_LBL_LIST_CUSTOM"
+            description="COM_REQUEST_FORM_DESC_LIST_CUSTOM" 
+         default="{}" 
+        
+         required="true" 
+        filter="safehtml" />
+
+	</fieldset>
+
+</form>

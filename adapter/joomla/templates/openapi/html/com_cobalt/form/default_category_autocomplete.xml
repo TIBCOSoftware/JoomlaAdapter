@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<name>Autocomplete</name>
+	<author>MintJoomla</author>
+	<creationDate>Febrary 2012</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 MintJoomla. All rights reserved.</copyright>
+	<license>Commercial (http://www.mintjoomla.com/commercial-license)</license>
+	<authorEmail>support@mintjoomla.com</authorEmail>
+	<authorUrl>www.mintjoomla.com</authorUrl>
+	<version>8.9</version>
+	<description>Template Category select</description>
+	
+	<fields name="tmpl_params">
+		<fieldset name="general">
+			<field name="max_width" type="text" size="6" default="400" label="CSELCTMAXW" description="CSELWDESCR" />
+			<field name="max_height" type="text" size="6" default="300" label="CSELCTMAXH" description="CSELHDESCR" />
+			<field name="cat_descr" type="list" default="0" label="CTOOTIPDESCR" description="">
+				<option value="0">CNO</option>
+				<option value="before">CTOOLTIPBEFOR</option>
+				<option value="after">CTOOLTIOPAFTER</option>
+				<option value="full">CTOOLTIPFULL</option>
+			</field>	
+			<field name="cat_descr_length" type="text" size="3" default="200" label="CDESCRCHARSLENGTH" />
+			<field name="cat_max_result" type="text" size="3" default="8" label="CMAXSUGGESTIONS" />
+			<field name="cat_img" type="radio" class="btn-group" default="1" label="CSHOWIMAGE">
+				<option value="0">CNO</option>
+				<option value="1">CYES</option>
+			</field>
+			<field name="cat_img_width" type="text" size="3" default="50" label="CIMGMAXWIDTH" />
+		</fieldset>
+	</fields>
+	<fields name="tmpl_core">
+		<fieldset name="general2">
+			<field name="category_label" type="radio" class="btn-group" label="CSHOWLABEL"  default="1"> 
+				<option value="0">CNO</option>
+				<option value="1">CYES</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

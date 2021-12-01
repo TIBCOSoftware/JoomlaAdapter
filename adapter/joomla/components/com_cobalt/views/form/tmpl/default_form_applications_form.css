@@ -1,0 +1,36 @@
+.asg-app-step-title-container {
+  height:23px;
+  position:relative;
+}
+.asg-app-step-title-container-line {
+  height:10px;
+  background:#006699;
+  position:relative;
+  top:8px;
+}
+.asg-app-step-title {
+  position:absolute;
+  background:#FFFFFF;
+  padding:0px 5px;
+  z-index:999;
+}
+.asg-app-step-title i {
+  font-size:14px;
+  color:#006699;
+  cursor: pointer;
+}
+.asg-app-step-1 {
+  height: auto;
+  margin-bottom: 15px;
+}
+.asg-app-step-2 {
+  height: auto;
+  margin-bottom: 15px;
+}
+.asg-app-step-3 {
+  height: auto;
+  margin-bottom: 15px;
+}
+#adminForm .form-actions .btn:last-child {
+  display: inline-block;
+}
