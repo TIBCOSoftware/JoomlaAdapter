@@ -18,6 +18,8 @@ experience to application developers and API providers.
 
 For more details, Please refer to the instruction.txt file at the below path 
 /adapter/Examples/instructions.txt
+
+For older releases, please visit https://github.com/TIBCOSoftware/JoomlaAdapter-legacy
 ===========================================================================
 Supported Third-party Software
 
